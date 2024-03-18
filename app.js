@@ -37,19 +37,27 @@ const form = document.querySelector("form");
 const inputEl = document.querySelector("input");
 const button = document.querySelector("#button1");
 const ol = document.querySelector("ol");
+const button12 = document.querySelector("#button23");
 
 button.addEventListener("click", () => {
   ol.innerHTML = "";
   const music = new Audio("./music/mouse-click-153941 (1).mp3");
   music.play();
 });
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  ol.innerHTML += `<li><span>${inputEl.value}</span> <a href=""#>Delite</a></li>  `;
+  ol.innerHTML += `<li><span>${inputEl.value}</span> <button id="button23">Delite</button></li>`;
   inputEl.value = "";
   new Audio("./music/37-enter-100035.mp3").play();
 });
 
 inputEl.addEventListener("input", () => {
   new Audio("./music/mech-keyboard-02-102918.mp3").play();
+});
+
+button12.addEventListener("click", () => {
+  li.innerHTML = "";
+  const music = new Audio("./music/mouse-click-153941 (1).mp3");
+  music.play();
 });
